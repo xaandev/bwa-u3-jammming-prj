@@ -1,6 +1,6 @@
 
 const clientId = 'f79ac01b6fb046059072c515a1f880a4';
-const redirectUri = 'xaandev.surge.sh';
+const redirectUri = 'http://localhost:3000/';
 let accessToken = '';
 let expiresIn = '';
 
