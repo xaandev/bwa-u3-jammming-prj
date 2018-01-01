@@ -12,12 +12,11 @@ class Track extends Component {
 	
 	renderAction() {
 		if (this.props.onRemove) {
-      return <a className='Track-action' onClick={this.removeTrack}>-</a>;
-    } else {
-      return <a className='Track-action' onClick={this.addTrack}>+</a>;
-    }
-  }
-	
+			return <a className='Track-action' onClick={this.removeTrack}>-</a>;
+		} else {
+			return <a className='Track-action' onClick={this.addTrack}>+</a>;
+		}
+	}
 	
 	addTrack() {
 		this.props.onAdd(this.props.track);
@@ -29,13 +28,23 @@ class Track extends Component {
 		
   render() {
     return (
-		<div className="Track">
-		  <div className="Track-information">
-			<h3>{this.props.track.name}</h3>
-			<p>{this.props.track.artist} | {this.props.track.album}</p>
-		  </div>
-		  <a className="Track-action" onClick={this.addTrack}>+</a>
-		  <a className="Track-action" onClick={this.removeTrack}>-</a>
+		<div className="Track-container">
+			<div className="Track">
+			  <div className="Track-information">
+				<h3>{this.props.track.name}</h3>
+				<p>{this.props.track.artist} | {this.props.track.album}</p>
+			  </div>
+			  <a className="Track-action" onClick={this.addTrack}>+</a>
+			  <a className="Track-action" onClick={this.removeTrack}>-</a>
+			</div>
+			<div className='Preview'>
+			  <div className="Preview-text">Preview </div>
+			  <div>
+				<audio controls preload="metadata">
+					<source src={this.props.track.preview}></source>
+				</audio>
+			  </div>
+			</div>
 		</div>
   )};
 }
