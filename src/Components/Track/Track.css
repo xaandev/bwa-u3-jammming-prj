@@ -1,12 +1,18 @@
+
+.Track-container {
+	border-bottom: 1px solid rgba(256, 256, 256, 0.8);
+	align-items: center;
+	justify-content: center;
+}
+
 .Track {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(256, 256, 256, 0.8);
 }
 
 .Track-action {
   cursor: pointer;
-  padding: .5rem;
+  padding: .25rem;
   font-size: 1.05rem;
   transition: color .25s;
 }
@@ -24,11 +30,22 @@
 }
 
 .Track-information h3 {
-  margin-bottom: .22rem;
+  margin-bottom: .1rem;
 }
 
 .Track-information p {
   font-size: .83rem;
   font-weight: 300;
   color: rgba(256, 256, 256, 0.8);
+}
+
+.Preview {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem 1rem;
+}
+
+.Preview-text {
+	padding-right: 1rem;
 }
